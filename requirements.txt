@@ -1,0 +1,10 @@
+# ===== Request Acceptor Bot — runtime dependencies =====
+# kurigram is the actively-maintained Pyrogram fork (drop-in: `import pyrogram`).
+# It is required here rather than upstream pyrogram 2.0.106, which was archived
+# at TL layer 158 and therefore has no ButtonStyle / coloured inline buttons
+# (Bot API 9.4, Feb 2026). kurigram tracks the current layer and exposes
+# `InlineKeyboardButton(style=...)`, which is what the whole UI is built on.
+kurigram==2.2.25
+tgcrypto==1.2.5
+aiosqlite==0.20.0
+python-dotenv==1.0.1
